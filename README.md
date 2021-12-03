@@ -12,7 +12,11 @@
 
 <h2 id="website-backend-request">Сайт формирует ссылку</h2>
 
-Формирует параметры авторизации и отрпавляет пользователя на https://oberton.io/deeplink с параметрами
+Формирует параметры авторизации, кодирует значения ключей параметров согласно стандарта URL-encoded format https://www.w3schools.com/tags/ref_urlencode.ASP, на напримере ключа параметра callbackUrl
+
+https://callback.url => https%3A%2F%2Fcallback.url
+
+и отрпавляет пользователя через диплинк https://oberton.io/deeplink с этими параметрами в приложение, пример ниже:
 
 **type**\
 Константное значение **auth**\
@@ -34,8 +38,8 @@ url на который кошелёк отправит POST запрос, по�
 Значение **string**\
 Сообщение которое пользователь увидит при авторизации.
 
-<h3 id="website-backend-request-sample">Пример</h3>
-https://oberton.io/deeplink?type=auth&id=testid&otp=testopt&callbackUrl=https://callback.url&warningText=Attention
+<h3 id="website-backend-request-sample">Пример диплинк ссылки</h3>
+https://oberton.io/deeplink?type=auth&id=testid&otp=testopt&callbackUrl=https%3A%2F%2Fcallback.url&warningText=Attention
 
 
 <h2 id="userstory">Пользователь подтверждает транзакцию</h2>
