@@ -1,4 +1,4 @@
-# Authorize From Oberton
+# Authorize From Everspace (rebranding from Oberton)
 
 ## Содержание
 * [Сайт формирует ссылку](#website-backend-request)
